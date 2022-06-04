@@ -4,29 +4,126 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Tennis</title>
-	<link rel="shortcut icon" href="images/tennis-ball.png" type="image/x-icon">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="shortcut icon" href="tennis-ball.png" type="image/x-icon">
+	<link rel="stylesheet" href="styles2.css">
 </head>
 <body>
 	<h1 class="title">Bienvenido a la cancha</h1>
 	<div class="main-wrapper">
-		<img id="court" src="images/tennis-court.jpg" alt="court">
-		<div class="position place">
-			<h3 id="fondo">Fondo</h3>
-			<div class="wrapper-place1">
-				<h3>Neutral Position</h3>
-				<h3>Semi Open</h3>
-				<h3>Open Stance</h3>
-			</div>
+		<img id="court" src="tennis-court.jpg" alt="court">
+		<div class="effect position place">
+			<h3>Derecha</h3>
 		</div>
-		<div class="position place">
+		<div id="fondo" class="hide">
+			<h3>Fondo</h3>
+		</div>
+		<div id="aproximacion" class="hide">
 			<h3>Aproximación</h3>
 		</div>
-		<div class="position place">
-			<h3>Volea/smash</h3>
+		<div id="volea" class="hide">
+			<h3>Volea</h3>
 		</div>
+		<div class="effect position place">
+			<h3>Zurda</h3>
+		</div>
+		<div id="fondo-izquierdo" class="hide">
+			<h3>Fondo</h3>
+		</div>
+		<div id="aproximacion-izquierdo" class="hide">
+			<h3>Aproximación</h3>
+		</div>
+		<div id="volea-izquierdo" class="hide">
+			<h3>Volea</h3>
+		</div>
+		<div class="effect position place">
+			<i class="fa-solid fa-arrow-left fa-2xl"></i>
+			<h3>Regresar</h3>
+		</div>
+		
 	</div>
+<script>
 	
-<script></script>
+	const items = document.querySelector('.main-wrapper').children;
+	const derecha = items[1];
+	const fondo = items[2];
+	const aprox = items[3];
+	const volea = items[4];
+	const zurda = items[5];
+	const fondoIzquierda = items[6];
+	const aproxIzquierda = items[7];
+	const voleaIzquierda = items[8]
+	const regresar = items[9];
+
+	regresar.onclick = () => {
+
+		if(fondo.classList.contains('position')) {
+			fondo.classList.remove('position', 'center');
+			fondo.classList.toggle('hide');
+			aprox.classList.remove('position', 'center');
+			aprox.classList.toggle('hide');
+			volea.classList.remove('position', 'center');
+			volea.classList.toggle('hide');
+			derecha.classList.toggle('hide');
+			derecha.classList.add('position', 'place');
+			zurda.classList.toggle('hide');
+			zurda.classList.add('position', 'place');
+		}
+
+		if(fondoIzquierda.classList.contains('position')) {
+			fondoIzquierda.classList.remove('position', 'center');
+			fondoIzquierda.classList.toggle('hide');
+			aproxIzquierda.classList.remove('position', 'center');
+			aproxIzquierda.classList.toggle('hide');
+			voleaIzquierda.classList.remove('position', 'center');
+			voleaIzquierda.classList.toggle('hide');
+			derecha.classList.toggle('hide');
+			derecha.classList.add('position', 'place');
+			zurda.classList.toggle('hide');
+			zurda.classList.add('position', 'place');
+		}
+	}
+
+	derecha.onclick = () => {
+		if(derecha.firstElementChild.innerText === 'Forehand' || derecha.firstElementChild.innerText === 'Backhand') {
+			derecha.classList.remove('position', 'place');
+			derecha.classList.toggle('hide');
+			zurda.classList.remove('position', 'place');
+			zurda.classList.toggle('hide');
+			fondo.classList.add('position', 'center', 'effect');
+			fondo.classList.remove('hide');
+			aprox.classList.add('position', 'center', 'effect');
+			aprox.classList.remove('hide');
+			volea.classList.add('position', 'center', 'effect');
+			volea.classList.remove('hide');
+		}
+
+		if(derecha.firstElementChild.innerText === 'Derecha') {
+			derecha.firstElementChild.innerText = 'Forehand';
+			zurda.firstElementChild.innerText = 'Backhand';
+		}
+	}
+
+	zurda.onclick = () => {
+
+		if(zurda.firstElementChild.innerText === 'Forehand' || zurda.firstElementChild.innerText === 'Backhand') {
+			zurda.classList.remove('position', 'place');
+			zurda.classList.toggle('hide');
+			derecha.classList.remove('position', 'place');
+			derecha.classList.toggle('hide');
+			fondoIzquierda.classList.add('position', 'center', 'effect');
+			fondoIzquierda.classList.remove('hide');
+			aproxIzquierda.classList.add('position', 'center', 'effect');
+			aproxIzquierda.classList.remove('hide');
+			voleaIzquierda.classList.add('position', 'center', 'effect');
+			voleaIzquierda.classList.remove('hide');
+		}
+
+		if(zurda.firstElementChild.innerText === 'Zurda') {
+			derecha.firstElementChild.innerText = 'Backhand';
+			zurda.firstElementChild.innerText = 'Forehand';
+		}
+	}
+</script>
+<script src="https://kit.fontawesome.com/2ef60001ec.js" crossorigin="anonymous"></script>
 </body>
 </html>
