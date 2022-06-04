@@ -18,6 +18,11 @@ body {
 	/*background-color: hsla(200, 200%, 60%, 1.0);*/
 }
 
+a {
+	text-decoration: none;
+	color: black;
+}
+
 .center {
 	display: flex;
 	justify-content: center;
@@ -67,42 +72,149 @@ body {
 	color: hsla(200, 40%, 20%, 1.0);
 }
 
+/*DERECHA*/
 .main-wrapper .place:nth-child(2) {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 52%;
 	height: 33%;
+	clip-path: polygon(15.5% 4%, 63% 4%, 99% 100%, 15.5% 100%);
 	bottom: 22.5%;
 	right: 6%;
 	transition: 800ms;
 }
 
-.main-wrapper .place:nth-child(2):hover, .main-wrapper .place:nth-child(2):focus  {
+.main-wrapper .place:nth-child(2):hover, .main-wrapper .place:nth-child(2):target  {
 	cursor: pointer;
 	background-color: hsla(220, 50%, 30%, 0.5);
 	clip-path: polygon(15.5% 4%, 63% 4%, 99% 100%, 15.5% 100%);
 	transition: 800ms;
 }
 
+/*FONDO*/
+.main-wrapper .position:nth-child(3) {
+	width: 50%;
+	height: 22%;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+	border-bottom-right-radius: 10px;
+	right: 0;
+	bottom: 0;
+	
+}
+
+.main-wrapper .position:nth-child(3):hover, .main-wrapper .position:nth-child(3):target  {
+	cursor: pointer;
+	background-color: lightblue;
+	opacity: 0.5;
+	transition: 800ms;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/*APROXIMACION*/
+.main-wrapper .position:nth-child(4) {
+	width: 50%;
+	height: 20%;
+	clip-path: polygon(0 0, 64% 0, 88% 100%, 0 100%);
+	right: 0;
+	bottom: 22%;
+}
+
+.main-wrapper .position:nth-child(4):hover, .main-wrapper .position:nth-child(4):target {
+	cursor: pointer;
+	background-color: lightblue;
+	opacity: 0.5;
+	transition: 800ms;
+	clip-path: polygon(0 0, 64% 0, 88% 100%, 0 100%);
+}
+
+/*VOLEA*/
+.main-wrapper .position:nth-child(5) {
+	width: 40%;
+	height: 12%;
+	right:10%;
+	clip-path: polygon(0 0, 63% 0, 80% 100%, 0 100%);
+	bottom: 42%;
+}
+
+.main-wrapper .position:nth-child(5):hover, .main-wrapper .position:nth-child(5):target {
+	cursor: pointer;
+	background-color: lightblue;
+	opacity: 0.5;
+	transition: 800ms;
+	clip-path: polygon(0 0, 63% 0, 80% 100%, 0 100%);
+}
+
+/*ZURDA*/
 .main-wrapper .place:nth-child(6) {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 52%;
 	height: 33%;
+	clip-path: polygon(39% 1%, 86% 0%, 86% 99%, 1% 100%);
 	bottom: 22%;
 	left: 5%;
 	transition: 800ms;
 }
 
-.main-wrapper .place:nth-child(6):hover, .main-wrapper .place:nth-child(6):focus {
+.main-wrapper .place:nth-child(6):hover, .main-wrapper .place:nth-child(6):target {
 	cursor: pointer;
 	background-color: hsla(220, 50%, 30%, 0.5);
 	clip-path: polygon(39% 1%, 86% 0%, 86% 99%, 1% 100%);
 	transition: 800ms;
 }
 
+/*FONDO IZQUIERDO*/
+.main-wrapper .position:nth-child(7) {
+	width: 49.6%;
+	height: 22%;
+	border-bottom-left-radius: 10px;
+	left: 0.1%;
+	bottom: 0;
+}
+
+.main-wrapper .position:nth-child(7):hover, .main-wrapper .position:nth-child(7):target {
+	cursor: pointer;
+	background-color: lightblue;
+	opacity: 0.5;
+	transition: 800ms;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.main-wrapper .position:nth-child(8) {
+	width: 45%;
+	height: 20%;
+	border-bottom-left-radius: 10px;
+	left: 4.7%;
+	bottom: 21.9%;
+}
+
+.main-wrapper .position:nth-child(8):hover, .main-wrapper .position:nth-child(8):target {
+	cursor: pointer;
+	background-color: lightblue;
+	opacity: 0.5;
+	transition: 800ms;
+	clip-path: polygon(28% 2%, 100% 0, 100% 100%, 1% 100%);
+}
+
+.main-wrapper .position:nth-child(9) {
+	width: 40%;
+	height: 12%;
+	border-bottom-left-radius: 10px;
+	left: 10%;
+	bottom: 42%;
+}
+
+.main-wrapper .position:nth-child(9):hover, .main-wrapper .position:nth-child(9):target {
+	cursor: pointer;
+	background-color: lightblue;
+	opacity: 0.5;
+	transition: 800ms;
+	clip-path: polygon(36% 2%, 100% 0, 100% 100%, 20% 100%);
+}
+
+/*REGRESAR*/
 .main-wrapper .place:nth-child(10) {
 	display: flex;
 	align-items: center;
@@ -119,105 +231,6 @@ body {
 	cursor: pointer;
 	color: hsla(220, 10%, 90%, 1);
 	transition: 800ms;
-}
-
-/*Niveles de la cancha*/
-/*Lado Derecho*/
-#fondo {
-	width: 50%;
-	height: 22%;
-	border-bottom-right-radius: 10px;
-	right: 0;
-	bottom: 0;
-	
-}
-
-#fondo:hover, #fondo:focus {
-	cursor: pointer;
-	background-color: lightblue;
-	opacity: 0.5;
-	transition: 800ms;
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-#aproximacion {
-	width: 50%;
-	height: 20%;
-	right: 0;
-	bottom: 22%;
-}
-
-#aproximacion:hover, #aproximacion:focus {
-	cursor: pointer;
-	background-color: lightblue;
-	opacity: 0.5;
-	transition: 800ms;
-	clip-path: polygon(0 0, 64% 0, 88% 100%, 0 100%);
-}
-
-#volea {
-	width: 40%;
-	height: 12%;
-	right:10%;
-	bottom: 42%;
-}
-
-#volea:hover, #volea:focus {
-	cursor: pointer;
-	background-color: lightblue;
-	opacity: 0.5;
-	transition: 800ms;
-	clip-path: polygon(0 0, 63% 0, 80% 100%, 0 100%);
-}
-
-/*lado izquierdo*/
-
-#fondo-izquierdo {
-	width: 49.6%;
-	height: 22%;
-	border-bottom-left-radius: 10px;
-	left: 0.1%;
-	bottom: 0;
-}
-
-#fondo-izquierdo:hover, #fondo-izquierdo:focus {
-	cursor: pointer;
-	background-color: lightblue;
-	opacity: 0.5;
-	transition: 800ms;
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-#aproximacion-izquierdo {
-	width: 45%;
-	height: 20%;
-	border-bottom-left-radius: 10px;
-	left: 4.7%;
-	bottom: 21.9%;
-}
-
-#aproximacion-izquierdo:hover, #aproximacion-izquierdo:focus {
-	cursor: pointer;
-	background-color: lightblue;
-	opacity: 0.5;
-	transition: 800ms;
-	clip-path: polygon(28% 2%, 100% 0, 100% 100%, 1% 100%);
-}
-
-#volea-izquierdo {
-	width: 40%;
-	height: 12%;
-	border-bottom-left-radius: 10px;
-	left: 10%;
-	bottom: 42%;
-}
-
-#volea-izquierdo:hover, #volea-izquierdo:focus {
-	cursor: pointer;
-	background-color: lightblue;
-	opacity: 0.5;
-	transition: 800ms;
-	clip-path: polygon(36% 2%, 100% 0, 100% 100%, 20% 100%);
 }
 
 @media only screen and (max-width: 1023px) {
