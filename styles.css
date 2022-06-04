@@ -75,13 +75,13 @@ body {
 	height: 33%;
 	bottom: 22.5%;
 	right: 6%;
-	clip-path: polygon(15.5% 4%, 63% 4%, 99% 100%, 15.5% 100%);
 	transition: 800ms;
 }
 
 .main-wrapper .place:nth-child(2):hover, .main-wrapper .place:nth-child(2):focus  {
 	cursor: pointer;
 	background-color: hsla(220, 50%, 30%, 0.5);
+	clip-path: polygon(15.5% 4%, 63% 4%, 99% 100%, 15.5% 100%);
 	transition: 800ms;
 }
 
@@ -93,13 +93,13 @@ body {
 	height: 33%;
 	bottom: 22%;
 	left: 5%;
-	clip-path: polygon(39% 1%, 86% 0%, 86% 99%, 1% 100%);
 	transition: 800ms;
 }
 
 .main-wrapper .place:nth-child(6):hover, .main-wrapper .place:nth-child(6):focus {
 	cursor: pointer;
 	background-color: hsla(220, 50%, 30%, 0.5);
+	clip-path: polygon(39% 1%, 86% 0%, 86% 99%, 1% 100%);
 	transition: 800ms;
 }
 
@@ -132,7 +132,7 @@ body {
 	
 }
 
-#fondo:hover {
+#fondo:hover, #fondo:focus {
 	cursor: pointer;
 	background-color: lightblue;
 	opacity: 0.5;
@@ -147,7 +147,7 @@ body {
 	bottom: 22%;
 }
 
-#aproximacion:hover {
+#aproximacion:hover, #aproximacion:focus {
 	cursor: pointer;
 	background-color: lightblue;
 	opacity: 0.5;
@@ -162,7 +162,7 @@ body {
 	bottom: 42%;
 }
 
-#volea:hover {
+#volea:hover, #volea:focus {
 	cursor: pointer;
 	background-color: lightblue;
 	opacity: 0.5;
@@ -180,7 +180,7 @@ body {
 	bottom: 0;
 }
 
-#fondo-izquierdo:hover {
+#fondo-izquierdo:hover, #fondo-izquierdo:focus {
 	cursor: pointer;
 	background-color: lightblue;
 	opacity: 0.5;
@@ -196,7 +196,7 @@ body {
 	bottom: 21.9%;
 }
 
-#aproximacion-izquierdo:hover {
+#aproximacion-izquierdo:hover, #aproximacion-izquierdo:focus {
 	cursor: pointer;
 	background-color: lightblue;
 	opacity: 0.5;
@@ -212,7 +212,7 @@ body {
 	bottom: 42%;
 }
 
-#volea-izquierdo:hover {
+#volea-izquierdo:hover, #volea-izquierdo:focus {
 	cursor: pointer;
 	background-color: lightblue;
 	opacity: 0.5;
