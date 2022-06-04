@@ -79,7 +79,7 @@ body {
 	transition: 800ms;
 }
 
-.main-wrapper .place:nth-child(2):hover {
+.main-wrapper .place:nth-child(2):hover, .main-wrapper .place:nth-child(2):focus  {
 	cursor: pointer;
 	background-color: hsla(220, 50%, 30%, 0.5);
 	transition: 800ms;
@@ -97,7 +97,7 @@ body {
 	transition: 800ms;
 }
 
-.main-wrapper .place:nth-child(6):hover {
+.main-wrapper .place:nth-child(6):hover, .main-wrapper .place:nth-child(6):focus {
 	cursor: pointer;
 	background-color: hsla(220, 50%, 30%, 0.5);
 	transition: 800ms;
